@@ -4,6 +4,8 @@ A nice git interface compatible with POSIX using POSIX-compatible `sh` and a bat
 
 ## Installing
 
+From the [website](https://xernphoton.github.io/download.html).
+
 ### Linux
 
 This will soon be available through your package manager of choice. For now, click <a href="https://github.com/xernphoton/git-shell/releases/download/alpha/git.sh" download="git.sh">here</a> and add it to your path.
