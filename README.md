@@ -6,11 +6,11 @@ A nice git interface compatible with POSIX using POSIX-compatible `sh` and a bat
 
 ### Linux
 
-This will soon be available through your package manager of choice. For now, click <a href="https://raw.githubusercontent.com/xernphoton/git-shell/main/git.sh" download>here</a> and add it to your path.
+This will soon be available through your package manager of choice. For now, click <a href="https://raw.githubusercontent.com/xernphoton/git-shell/main/git.sh" download="git.sh">here</a> and add it to your path.
 
 ### MacOS
 
-This will soon be available through Homebrew. For now, click <a href="https://raw.githubusercontent.com/xernphoton/git-shell/main/git.sh" download>here</a> and add it to your path.
+This will soon be available through Homebrew. For now, click <a href="https://raw.githubusercontent.com/xernphoton/git-shell/main/git.sh" download="git.sh">here</a> and add it to your path.
 
 ### Windows
 
