@@ -15,12 +15,12 @@ elif [ "$action" = "clone" ]; then
     if [ "$github" = "Y" ] || [ "$github" = "y" ]; then
         read -p "User: " user
         read -p "Repository: " repository
-        git clone "git://github.com/$user/$repository.git"
+        git clone "https://github.com/$user/$repository.git"
     else
         read -p "Remote? [Y/n]: " remote
         if [ "$remote" = "Y" ] || [ "$remote" = "y" ]; then
-            read -p "URL (no git:// or .git): " url
-            git clone "git://$url.git"
+            read -p "URL (no https:// or .git): " url
+            git clone "https://$url.git"
         else
             read -p "Path: " path
             git clone "$path"
@@ -48,8 +48,8 @@ elif [ "$action" = "push" ]; then
 elif [ "$action" = "remote" ]; then
     read -p "Subcommand: " subcommand
     if [ "$subcommand" = "add" ]; then
-        read -p "URL (no git:// or .git): " url
-        git remote origin "git://$url.git"
+        read -p "URL (no https:// or .git): " url
+        git remote origin "https://$url.git"
     elif [ "$subcommand" = "rename" ]; then
         read -p "Filename: " branch
         read -p "New Name for $branch: " new
