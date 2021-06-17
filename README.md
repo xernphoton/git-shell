@@ -31,8 +31,8 @@ This will soon be available through Homebrew. For now, clone the repository and 
 - [ ] Register `git.sh` at PorkBun with DigitalOcean hosting
 - [ ] Add `.bat` support
 - [ ] Refactor code with functions
+- [ ] Add flags
 - [ ] Deploy to package managers
-- [ ] Deploy website
 - [ ] Add lesser-used git commands
 - [ ] Add setup script
 - [ ] Add support for a config script
