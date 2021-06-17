@@ -199,63 +199,69 @@ elif [ "$action" = "log" ]; then
     elif [ "$view" = "one-line" ]; then
         read -p "Filters [ amount | date | author | changed | message | file | range ]: " filters
         command="git log --pretty=oneline"
-        if [ "$filters" = *"amount"* ]; then
+        if [[ "$filters" = *"amount"* ]]; then
             read -p "Amount of commits to display: " amount
             command="$command"" -$amount"
-        elif [ "$filters" = *"date"* ]; then
+        fi
+        if [[ "$filters" = *"date"* ]]; then
             echo "Format: YEAR-MONTH-DAY or relative references such as 'today', 'yesterday', and '1 week ago'"
             read -p "Before: " before
             read -p "After: " after
             command="$command"' --before="$before" --after="$after"'
-        elif [ "$filters" = *"author"* ]; then
+        fi
+        if [[ "$filters" = *"author"* ]]; then
             read -p "Author: " author
             command="$command"' --author="$author"'
-        elif [ "$filters" = *"changed"* ]; then
+        fi
+        if [[ "$filters" = *"changed"* ]]; then
             command="$command"" --name-status"
-        elif [ "$filters" = *"message"* ]; then
+        fi
+        if [[ "$filters" = *"message"* ]]; then
             read -p "Message content to search for: " message
             command="$command"' --grep="$message"'
-        elif [ "$filters" = *"range"* ]; then
+        fi
+        if [[ "$filters" = *"range"* ]]; then
             read -p "Branch 1 (main): " one
             read -p "Branch 2: " two
             command="$command"" $one..$two"
-        elif [ "$filters" = *"file"* ]; then
+        fi
+        if [[ "$filters" = *"file"* ]]; then
             read -p "Files to look for (space seperated): " files
             command="$command"" -- $files"
-        else
-            echo "Invalid Filters"
-            exit 1
         fi
         eval $command
     elif [ "$view" = "graph" ]; then
         read -p "Filters [ amount | date | author | changed | message | file | range ]: " filters
         command="git log --graph --oneline --decorate --all"
-        if [ "$filters" = *"amount"* ]; then
+        if [[ "$filters" = *"amount"* ]]; then
             read -p "Amount of commits to display: " amount
             command="$command"" -$amount"
-        elif [ "$filters" = *"date"* ]; then
+        fi
+        if [[ "$filters" = *"date"* ]]; then
             echo "Format: YEAR-MONTH-DAY or relative references such as 'today', 'yesterday', and '1 week ago'"
             read -p "Before: " before
             read -p "After: " after
             command="$command"' --before="$before" --after="$after"'
-        elif [ "$filters" = *"author"* ]; then
+        fi
+        if [[ "$filters" = *"author"* ]]; then
             read -p "Author: " author
             command="$command"' --author="$author"'
-        elif [ "$filters" = *"changed"* ]; then
+        fi
+        if [[ "$filters" = *"changed"* ]]; then
             command="$command"" --name-status"
-        elif [ "$filters" = *"message"* ]; then
+        fi
+        if [[ "$filters" = *"message"* ]]; then
             read -p "Message content to search for: " message
             command="$command"' --grep="$message"'
-        elif [ "$filters" = *"range"* ]; then
+        fi
+        if [[ "$filters" = *"range"* ]]; then
             read -p "Branch 1 (main): " one
             read -p "Branch 2: " two
             command="$command"" $one..$two"
-        elif [ "$filters" = *"file"* ]; then
+        fi
+        if [[ "$filters" = *"file"* ]]; then
             read -p "Files to look for (space seperated): " files
             command="$command"" -- $files"
-        else
-            echo "Invalid Filters"
-            exit 1
         fi
         eval $command
     elif [ "$view" = "short" ]; then
