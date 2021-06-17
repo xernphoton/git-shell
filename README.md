@@ -28,7 +28,9 @@ This will soon be available through Homebrew. For now, clone the repository and 
 
 ## To-do
 
+- [ ] Register `git.sh` at PorkBun with DigitalOcean hosting
 - [ ] Add `.bat` support
+- [ ] Refactor code with functions
 - [ ] Deploy to package managers
 - [ ] Deploy website
 - [ ] Add lesser-used git commands
