@@ -34,5 +34,6 @@ This will soon be available through Homebrew. For now, clone the repository and 
 - [ ] Add flags
 - [ ] Deploy to package managers
 - [ ] Add lesser-used git commands
+- [ ] Add custom commands
 - [ ] Add setup script
 - [ ] Add support for a config script
