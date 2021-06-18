@@ -24,6 +24,11 @@ This will soon be available through Homebrew. For now, download it from the webs
 * Can clone and push directly to GitHub
 * More to come in the future...
 
+## Known Bugs & Fixes
+
+* Running `git.sh` says you don't have git installed when you do
+  * Remove lines 3-7 in `git.sh`
+
 ## License
 
 [MIT License](https://github.com/xernphoton/git-shell/blob/main/LICENSE)
